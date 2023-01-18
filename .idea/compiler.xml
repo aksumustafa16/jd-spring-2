@@ -14,6 +14,8 @@
     <bytecodeTargetLevel>
       <module name="Spring-06-JavaCode-Configuration" target="19" />
       <module name="Spring-06-JavaCode-PostConstruct-PreDestroy" target="19" />
+      <module name="Spring-06-JavaCode2-PostConstruct-PreDestroy" target="19" />
+      <module name="Spring-061-JavaCode-PostConstruct-PreDestroy" target="19" />
     </bytecodeTargetLevel>
   </component>
 </project>
