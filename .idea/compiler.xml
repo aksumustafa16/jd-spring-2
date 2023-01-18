@@ -7,8 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Spring-06-JavaCode-Configuration" />
+        <module name="Spring-06-JavaCode-Configuration (2)" />
+        <module name="Spring-06-JavaCode-Configuration (1)" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Spring-06-JavaCode-Configuration" target="19" />
+      <module name="Spring-06-JavaCode-PostConstruct-PreDestroy" target="19" />
+    </bytecodeTargetLevel>
   </component>
 </project>
