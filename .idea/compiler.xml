@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Spring-06-JavaCode-Configuration (2)" />
         <module name="Spring-06-JavaCode-Configuration (1)" />
+        <module name="cybertek" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,5 +18,10 @@
       <module name="Spring-06-JavaCode2-PostConstruct-PreDestroy" target="19" />
       <module name="Spring-061-JavaCode-PostConstruct-PreDestroy" target="19" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cybertek" options="-parameters" />
+    </option>
   </component>
 </project>
