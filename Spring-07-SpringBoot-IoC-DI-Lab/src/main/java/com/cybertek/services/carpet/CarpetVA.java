@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 @Component
 public class CarpetVA implements Carpet {
@@ -21,9 +22,13 @@ public class CarpetVA implements Carpet {
     @Override
     public BigDecimal getSgFtPrice(City city) {
 
+        BigDecimal defaultValue = BigDecimal.ZERO;
+
+        Optional <Map.Entry<City,BigDecimal>> collect = sqPriceForCity.
+                entrySet().stream().filter(x -> x.getKey() == city).findFirst();
 
 
 
-        return null;
+        return collect.isPresent() ? collect.get().getValue() : defaultValue;
     }
 }
