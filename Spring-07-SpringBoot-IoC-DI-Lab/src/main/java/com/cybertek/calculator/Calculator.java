@@ -12,17 +12,22 @@ import java.math.BigDecimal;
 @Component
 public class Calculator {
 
-    @Qualifier("carpetVA")
+    @Qualifier("carpetTX")
     @Autowired
     private Carpet carpet;
     @Qualifier("kitchen")
     @Autowired
     private Floor floor;
 
-    public String getTotalCarpetCost(City city){
+    public String getTotalCarpetCost(City city) throws Exception{
 
         BigDecimal cost = carpet.getSgFtPrice(city).multiply(floor.getArea());
 
+        if (cost.compareTo(BigDecimal.ZERO) == 0) {
+            throw new Exception("This city does not exist");
+        }
         return "Total cost for Carpet: " + cost;
+
+
     }
 }
